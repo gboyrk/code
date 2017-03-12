@@ -1,0 +1,91 @@
+Architecture Design for scalable System
+
+[Problem Statement]
+
+Suppose, we have a data set of 1M+ users who are using Amazon for online shopping. Challenge is to design a scalable detailed architecture and technical stack required to build web-based analytics dashboard.
+
+[Data Parameters]
+
+    user[] —> {id, name}
+
+    Items[] —> {id, name, description}
+
+    Item_purchased[] —> {id, user_id,item_id, cost_price, extra_cost, price_purchased}
+
+id unique number to identify a row
+
+name Name of User/Item
+
+user_id unique id of the user from user[]
+
+item_id unique id of the item from item[]
+
+cost_price cost price of the item
+
+extra_cost extra cost of the item for Amazon
+
+price_purchased purchase price for the item
+
+^ Some parameters may have text or null value in it; handle it carefully!
+
+[Basic Features]
+
+    Web based Dashboard should help provide analysis on given data.
+
+    You may add any significant finding in frontend layout as a feature, but we would expect below two data-points after analysing/processing data:
+
+     - Most common Item (frequent, top two)
+
+     - Average Revenue per item
+
+    Frontend dashboard containing Visual Graphs and Data Matrix.
+
+    Elegant front end connecting with backend services to fetch data matrix.
+
+    Backend Services are RESTFul endpoints serving frontend.
+
+    Backend should take care of special fields with nulls, unicode and/or empty fields.
+
+[Deliverables]
+
+    Two factual data-points mentioned in basic feature.
+
+    Task Execution Flow (should contain backend / frontend aspects).
+
+    Tech Stack Used and role of each stack
+
+    You are expected to provide HLD (High level diagrams) and LLD (Low level diagrams).
+
+    Also, elaboration on how would you implement basic features:
+
+     - Architecture diagram
+
+     - High level components
+
+    Each component’s classes with API signatures, member variables.
+
+    Sequence diagrams for the main use cases across all the components.
+
+    DB schema including the different tables and their schema backing each class/component.
+
+[Requirement]
+
+    Understand the underlying problem and solution around it.
+
+    Provide viable solution to build given requirement.
+
+    Give a scalable solution that can handle this large amount of data.
+
+    Submit the necessary deliverables.
+
+Note : Your task is not to code or develop anything but provide us Architecture design to implement aforementioned requirement efficiently.
+
+[Guide]
+
+    Drawing Tools: https://www.draw.io/ | http://asciiflow.com/
+
+    Stacks: http://techstacks.io/
+
+    Hand written design is also fine as long as it’s legible, please attach snapshots of the hand written design if you prefer that over the drawing tools
+
+    You need not provide functional prototype, but the deliverables mentioned after
